@@ -1,0 +1,19 @@
+#############################################################################
+##
+##  README              TriangulationsAndBlowupsForToricVarieties package
+##                      Martin Bies
+##
+##  Copyright 2019      ULB Brussels
+##
+##  A package to compute triangulations and blowups of toric varieties
+##
+#############################################################################
+
+README file for the `TriangulationsAndBlowupsForToricVarieties' GAP4 package
+        
+To get the latest version of this GAP 4 package pull the corresponding branch
+from github. 
+
+E-mail me if there are any questions, remarks, suggestions. Also, I would like to hear about applications of this package.
+
+Martin Bies, martin.bies@alumni.uni-heidelberg.de

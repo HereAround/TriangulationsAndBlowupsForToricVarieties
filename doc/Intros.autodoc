@@ -1,0 +1,9 @@
+@Chapter Introduction
+
+@Section What is the goal of the TriangulationsAndBlowupsForToricVarieties package?
+
+**TriangulationsAndBlowupsForToricVarieties** provides data structures to compute triangulations and blowups of toric varieties.
+
+@EndSection
+
+@Chapter Toric varieties from grading
