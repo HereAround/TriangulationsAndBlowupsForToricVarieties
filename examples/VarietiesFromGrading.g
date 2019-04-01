@@ -20,8 +20,6 @@ CoxRing( v1[ 1 ] );
 
 #! @Subsection Example for constructing the conifold from grading
 
-LoadPackage( "TriangulationsAndBlowupsForToricVarieties" );
-
 #! @Example
 g2 := [[1,1,-1,-1]];
 #! [ [ 1,1,-1,-1 ] ]
