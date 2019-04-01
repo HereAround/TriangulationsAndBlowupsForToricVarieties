@@ -7,3 +7,18 @@
 #! @Chapter Blowups of toric varieties
 ##
 ################################################################################################
+
+########################
+##
+## Constructors
+##
+########################
+
+InstallMethod( BlowupOfToricVariety,
+               "for a toric variety and a string specifying the blowup locus",
+               [ IsToricVariety, IsList ],
+  function( rays, blowup_locus )
+
+    return true;
+
+end );

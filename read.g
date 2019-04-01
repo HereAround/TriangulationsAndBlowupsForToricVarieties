@@ -11,3 +11,4 @@
 
 # the cohomology pieces
 ReadPackage( "TriangulationsAndBlowupsForToricVarieties", "gap/ToricVarietiesFromGrading.gi" );
+ReadPackage( "TriangulationsAndBlowupsForToricVarieties", "gap/BlowupsOfToricVarieties.gi" );
