@@ -182,7 +182,8 @@ InstallMethod( SequenceOfBlowupsOfToricVariety,
             Error( Concatenation( "The information for blowup ", String( i ), " is corrupted" ) );
         fi;
         
-        blowup_space := BlowupOfToricVariety( blowup_space, blowup_sequence[ 1 ], blowup_sequence[ 2 ] );
+        blowup_space := BlowupOfToricVariety( blowup_space, 
+                                              blowup_sequence[ i ][ 1 ], blowup_sequence[ i ][ 2 ] );
 
     od;
     

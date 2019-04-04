@@ -137,3 +137,28 @@ b15 := BlowupOfToricVariety( b14, "u4,v", "d" );
 final_space := BlowupOfToricVariety( b15, "u3,u5", "u15" );
 #! <A toric variety of dimension 5>
 #! @EndExample
+
+#! @Subsection Sequences of blowups
+
+#! @Example
+final_space2 := SequenceOfBlowupsOfToricVariety( base, 
+                    [ ["x,y,u","u1"], 
+                    ["x,y,u1","u2"],
+                    ["y,u1","u3"],
+                    ["y,u2","u4"],
+                    ["u2,u3","u5"],
+                    ["u1,u3","u6"],
+                    ["u2,u4","u7"],
+                    ["u3,u4","u8"],
+                    ["u4,u5","u9"],
+                    ["u5,u8","u10"],
+                    ["u4,u8","u11"],
+                    ["u4,u9","u12"],
+                    ["u8,u9","u13"],
+                    ["u9,u11","u14"],
+                    ["u4,v","d"],
+                    ["u3,u5","u15"] ] );
+#! <A toric variety of dimension 5>
+[ IsComplete( final_space2 ), IsSimplicial( final_space2 ), IsSmooth( final_space2 ) ];
+#! [ true, true, false ]
+#! @EndExample
