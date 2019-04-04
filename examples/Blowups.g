@@ -71,7 +71,7 @@ rays := [ [0,0,-1],[1,0,0],[0,1,0],[-1,-1,-17],[0,0,1] ];
 cones := [ [1,2,3], [1,2,4], [1,3,4], [2,3,5], [2,4,5], [3,4,5] ];
 #! [ [1,2,3], [1,2,4], [1,3,4], [2,3,5], [2,4,5], [3,4,5] ]
 weights := [ [1,-17], [0,1], [0,1], [0,1], [1,0] ];
-#! [ [1,-17], [0,1], [0,1], [0,1], [1,0] ];
+#! [ [1,-17], [0,1], [0,1], [0,1], [1,0] ]
 H3fold := ToricVariety( rays, cones, weights, vars );
 #! <A toric variety of dimension 3>
 B1H3fold := BlowupOfToricVariety( H3fold, "u,s", "u1" );
@@ -88,50 +88,52 @@ CoxRing( B1H3fold );
 
 #! @Example
 vars := "u,s,v,t,r,x,y,w";
-#! "u,s,v,t,r,x,y,w";
+#! "u,s,v,t,r,x,y,w"
 rays := [ [0,0,-1,-2,-3], [1,0,0,-2,-3], [0,1,0,-2,-3], [-1,-1,-17,-2,-3], [0,0,1,-2,-3], [0, 0, 0, 1, 0], 
 [0, 0, 0, 0, 1], [0, 0, 0, -2, -3] ];
 #! [ [0,0,-1,-2,-3], [1,0,0,-2,-3], [0,1,0,-2,-3], [-1,-1,-17,-2,-3], 
-#! [0,0,1,-2,-3], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1], [0, 0, 0, -2, -3] ];
+#! [0,0,1,-2,-3], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1], [0, 0, 0, -2, -3] ]
 cones := [ [1,2,3,6,7], [1,2,3,6,8], [1,2,3,7,8], [1,2,4,6,7], [1,2,4,6,8], [1,2,4,7,8], [1,3,4,6,7], [1,3,4,6,8], [1,3,4,7,8], [2,3,5,6,7], [2,3,5,6,8], [2,3,5,7,8], [2,4,5,6,7], [2,4,5,6,8], [2,4,5,7,8],[3,4,5,6,7], [3,4,5,6,8], [3,4,5,7,8] ];
-#! [ [1,2,3,6,7], [1,2,3,6,8], [1,2,3,7,8], [1,2,4,6,7], [1,2,4,6,8],
-#! [1,2,4,7,8], [1,3,4,6,7], [1,3,4,6,8], [1,3,4,7,8], [2,3,5,6,7], 
-#! [2,3,5,6,8], [2,3,5,7,8], [2,4,5,6,7], [2,4,5,6,8], [2,4,5,7,8],
-#! [3,4,5,6,7], [3,4,5,6,8], [3,4,5,7,8] ];
+#! [ [ 1, 2, 3, 6, 7 ], [ 1, 2, 3, 6, 8 ], [ 1, 2, 3, 7, 8 ], 
+#!   [ 1, 2, 4, 6, 7 ], [ 1, 2, 4, 6, 8 ], [ 1, 2, 4, 7, 8 ], 
+#!   [ 1, 3, 4, 6, 7 ], [ 1, 3, 4, 6, 8 ], [ 1, 3, 4, 7, 8 ], 
+#!   [ 2, 3, 5, 6, 7 ], [ 2, 3, 5, 6, 8 ], [ 2, 3, 5, 7, 8 ], 
+#!   [ 2, 4, 5, 6, 7 ], [ 2, 4, 5, 6, 8 ], [ 2, 4, 5, 7, 8 ], 
+#!   [ 3, 4, 5, 6, 7 ], [ 3, 4, 5, 6, 8 ], [ 3, 4, 5, 7, 8 ] ]
 w := [ [1,-17,0], [0,1,0], [0,1,0], [0,1,0], [1,0,0], [0,0,2], [0,0,3], [-2,14,1] ];
-#! [ [1,-17,0], [0,1,0], [0,1,0], [0,1,0], [1,0,0], [0,0,2], [0,0,3], [-2,14,1] ];
+#! [ [1,-17,0], [0,1,0], [0,1,0], [0,1,0], [1,0,0], [0,0,2], [0,0,3], [-2,14,1] ]
 base := ToricVariety( rays, cones, w, vars );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b1 := BlowupOfToricVariety( base, "x,y,u", "u1" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b2 := BlowupOfToricVariety( b1, "x,y,u1", "u2" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b3 := BlowupOfToricVariety( b2, "y,u1", "u3" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b4 := BlowupOfToricVariety( b3, "y,u2", "u4" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b5 := BlowupOfToricVariety( b4, "u2,u3", "u5" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b6 := BlowupOfToricVariety( b5, "u1,u3", "u6" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b7 := BlowupOfToricVariety( b6, "u2,u4", "u7" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b8 := BlowupOfToricVariety( b7, "u3,u4", "u8" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b9 := BlowupOfToricVariety( b8, "u4,u5", "u9" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b10 := BlowupOfToricVariety( b9, "u5,u8", "u10" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b11 := BlowupOfToricVariety( b10, "u4,u8", "u11" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b12 := BlowupOfToricVariety( b11, "u4,u9", "u12" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b13 := BlowupOfToricVariety( b12, "u8,u9", "u13" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b14 := BlowupOfToricVariety( b13, "u9,u11", "u14" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 b15 := BlowupOfToricVariety( b14, "u4,v", "d" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 final_space := BlowupOfToricVariety( b15, "u3,u5", "u15" );
-#! <A toric variety of dimension 4>
+#! <A toric variety of dimension 5>
 #! @EndExample
