@@ -187,6 +187,6 @@ InstallMethod( SequenceOfBlowupsOfToricVariety,
     od;
     
     # and finally return the result
-    return blowup_space:
+    return blowup_space;
 
 end );
