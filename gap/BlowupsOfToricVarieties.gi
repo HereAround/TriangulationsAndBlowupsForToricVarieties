@@ -44,7 +44,7 @@ InstallMethod( BlowupOfToricVariety,
                                           i -> rays[ Position( indeterminates, blowup_vars[ i ] ) ] );
 
     # 1: test that blowup_variable is not yet used for the other toric variables
-    if Position( indeterminates, blowup_variable ) then
+    if Position( indeterminates, blowup_variable ) <> fail then
         Error( Concatenation( "Homogeneous coordinate associated to blowup must differ",
                               "from all other homogeneous coordinates" ) );
     fi;
@@ -168,7 +168,7 @@ InstallMethod( SequenceOfBlowupsOfToricVariety,
                "for a toric variety and a list",
                [ IsToricVariety, IsList ],
   function( variety, blowup_sequence )
-    local i blowup_space;
+    local i, blowup_space;
     
     # if no blowup is to be performed
     if Length( blowup_sequence ) = 0 then
