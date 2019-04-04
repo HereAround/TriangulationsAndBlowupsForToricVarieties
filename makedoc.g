@@ -15,6 +15,8 @@ AutoDoc( "TriangulationsAndBlowupsForToricVarieties" : scaffold := true, autodoc
              rec( files := [ "doc/Intros.autodoc",
                          "gap/ToricVarietiesFromGrading.gd",
                          "examples/VarietiesFromGrading.g",
+                         "gap/BlowupsOfToricVarieties.gd",
+                         "examples/Blowups.g",                         
                          ],
              scan_dirs := []
              ),
