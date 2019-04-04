@@ -23,3 +23,13 @@
 #! @Arguments a toric variety, a list and a string
 DeclareOperation( "BlowupOfToricVariety",
                   [ IsToricVariety, IsList, IsString ] );
+
+#! @Description
+#! The arguments are a toric variety vari and a list of lists. Each entry of this list must
+#! contain the information for one blowup, i.e. be made up of the two lists used as input for 
+#! the method BlowupOfToricVariety. This method then performs this sequence of blowups
+#! and returns the corresponding toric variety.
+#! @Returns a variety
+#! @Arguments a toric variety and a list
+DeclareOperation( "SequenceOfBlowupsOfToricVariety",
+                  [ IsToricVariety, IsList ] );

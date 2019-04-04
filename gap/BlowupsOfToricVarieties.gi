@@ -162,3 +162,31 @@ InstallMethod( BlowupOfToricVariety,
     # can now build new toric variety from extended_ray_list and extended_cone_list
 
 end );
+
+
+InstallMethod( SequenceOfBlowupsOfToricVariety,
+               "for a toric variety and a list",
+               [ IsToricVariety, IsList ],
+  function( variety, blowup_sequence )
+    local i blowup_space;
+    
+    # if no blowup is to be performed
+    if Length( blowup_sequence ) = 0 then
+        return variety;
+    fi;
+    
+    # otherwise iterate over the blowups
+    blowup_space := variety;
+    for i in [ 1 .. Length( blowup_sequence ) ] do
+        if not Length( blowup_sequence[ i ] ) = 2 then
+            Error( Concatenation( "The information for blowup ", String( i ), " is corrupted" ) );
+        fi;
+        
+        blowup_space := BlowupOfToricVariety( blowup_space, blowup_sequence[ 1 ], blowup_sequence[ 2 ] );
+
+    od;
+    
+    # and finally return the result
+    return blowup_space:
+
+end );
